@@ -12,9 +12,9 @@ $mail->CharSet = 'UTF-8';
 $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->IsHTML(true);
 
-$mail->setFrom('maks', 'maks');
-$mail->addAddress('maks.31.0502@gmail.com');
-$mail->Subject = 'Hi!';
+$mail->setFrom('Maksim', 'Рады видеть Вас на семинаре');
+$mail->addAddress('$mail');
+$mail->Subject = 'Здравствуйте!';
 
 $body = '<h1>Letter</h1>';
 
@@ -31,9 +31,9 @@ if(trim(!empty($_POST['age']))){
 $mail->Body = $body;
 
 if (!$mail->send()) {
-    $message = 'oshibka';
+    $message = 'Ошибка';
 } else {
-    $message = 'dannye otpravleny '; 
+    $message = 'Ваши данные отправлены '; 
 }
 $response = ['message' => $message];
 
